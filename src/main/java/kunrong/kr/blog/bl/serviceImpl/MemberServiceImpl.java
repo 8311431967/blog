@@ -30,17 +30,17 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class MenberServiceImpl implements MemberService {
+public class MemberServiceImpl implements MemberService {
     @Resource
     private MemberDao memberDao;
 
     @Resource
     private AuthorityDao authorityDao;
 
-  
+
     @Resource
     private AuthService authService;
-    
+
 
     /**
      * Get list of hotel

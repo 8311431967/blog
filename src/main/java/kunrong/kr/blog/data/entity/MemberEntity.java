@@ -5,7 +5,9 @@ import kunrong.kr.blog.util.enums.MemberState;
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.List;
-
+@Entity
+@Table(name = "member")
+@PrimaryKeyJoinColumn(name = "id")
 public class MemberEntity extends UserEntity {
     private int id;
     private MemberState state;
@@ -13,7 +15,7 @@ public class MemberEntity extends UserEntity {
     private Integer score;
     private String description;
     private Integer remain;
-    private List<CheckRecordEntity> checkEntities;
+//    private List<CheckRecordEntity> checkEntities;
     private Date activeDate;
 
     @Id
@@ -26,15 +28,15 @@ public class MemberEntity extends UserEntity {
         this.id = id;
     }
 
-    @OneToMany
-    @JoinColumn(name = "memberid")
-    public List<CheckRecordEntity> getCheckEntities() {
-        return checkEntities;
-    }
-
-    public void setCheckEntities(List<CheckRecordEntity> checkEntities) {
-        this.checkEntities = checkEntities;
-    }
+//    @OneToMany
+//    @JoinColumn(name = "memberid")
+//    public List<CheckRecordEntity> getCheckEntities() {
+//        return checkEntities;
+//    }
+//
+//    public void setCheckEntities(List<CheckRecordEntity> checkEntities) {
+//        this.checkEntities = checkEntities;
+//    }
 
 
 
